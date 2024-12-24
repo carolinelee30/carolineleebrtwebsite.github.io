@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Encode+Sans:wght@100..900&family=Fredericka+the+Great&family=Istok+Web&family=Mina:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display&display=swap');
+
+        body {
+            margin: 0;
+            background-color: black;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Main background div */
+        .background {
+            min-height: 100vh; /* Ensure the background takes at least the full height of the viewport */
+            background: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/2dc128119484193.609e616b0cd5f.png) center center;
+            background-repeat: no-repeat;
+            background-size: cover; /* Ensure the image covers the entire area */
+            width: 100%;
+            color: #fff;
+            overflow: hidden; /* Hide overflow to prevent horizontal scrolling */
+           /* filter: blur(2px);
+            -webkit-filter: blur(2px);*/
+        }
+
+        /* Make the scrollable content div */
+        .scrollable {
+            height: 250vh; /* Make the div taller than the viewport for scrolling */
+            width: 100%;
+            background: inherit; /* Keep the same background */
+            position: relative;
+        }
+
+        .image2{
+            height: 1000px;
+            position: relative;
+            background: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/2dc128119484193.609e616b0cd5f.png) center center;
+            background-repeat: no-repeat;
+            /*background-attachment: fixed;
+            /*-webkit-background-size: cover;
+            -moz-background-size: cover;*/
+            background-size: cover;
+            color: #fff;
+            overflow: hidden;
+           /* filter: blur(2px);
+            -webkit-filter: blur(2px);*/
+
+        }
+
+        #header{
+          font-family: "Mina", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 80%; /* Width relative to its container */
+    max-width: 800px; /* Optional: limit the maximum width */
+    padding: 20px;
+    margin-bottom: 100px; /* Remove margin to prevent overflow */
+    text-align: center;
+    box-sizing: border-box;
+    z-index:3;
+    
+
+        }
+
+        #quote1{
+        width:70%;
+        height: 210px;
+        padding-right: 45px;
+        padding-left: 45px;
+        padding: 45px;
+        line-height: 50px;
+        /*margin-left: auto;
+        margin-right: auto;*/
+        margin-bottom: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 25px;
+        position: absolute;
+        color: white;
+        left: 37.5%;
+        transform: translateX(-50%);
+        z-index:3;
+        top: 50%;
+        background-color: rgb(0, 0, 0, 0.5);
+
+        }
+
+        #profile1{
+            width: 230px;
+            height: 230px;
+            position: absolute;
+            top: 55%;
+            left: 80%;
+            z-index:4;
+            background-image: url(https://aalbc.com/author-photos/Ytasha_L_Womack.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+
+        #blurb1{
+        width:70%;
+        height: 43%;
+        padding-right: 45px;
+        padding-left: 45px;
+        padding-top: 45px;
+        line-height: 30px;
+        margin-bottom: 40px;
+        font-family: "Encode Sans", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        position: absolute;
+        color: white;
+        left: 50%;
+        top: 108%;
+        transform: translateX(-50%);
+        background-color: rgb(5, 4, 89, 0.8);
+        }
+
+        #italic{
+            font-style: italic;
+        }
+
+        #quote2{
+        width:70%;
+        height: 280px;
+        padding: 45px;
+        line-height: 40px;
+        margin-bottom: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        position: absolute;
+        color: white;
+        left: 62.5%;
+        transform: translateX(-50%);
+        z-index:3;
+        top: 167%;
+        background-color: rgb(0, 0, 0, 0.5);
+        }
+
+         #profile2{
+            width: 285px;
+            height: 285px;
+            position: absolute;
+            top: 173%;
+            left: 5.5%;
+            z-index: 4;
+            background-image: url(https://www.berlinale.de/media/bilder/2018/boulevard_2018/18_02/180218_ks_0889_ORG.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+
+        #blurb2{
+        width:70%;
+        height: 46%;
+        padding-right: 45px;
+        padding-left: 45px;
+        padding-top: 45px;
+        line-height: 30px;
+        margin-bottom: 40px;
+        font-family: "Encode Sans", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        position: absolute;
+        color: white;
+        left: 50%;
+        top: 232%;
+        transform: translateX(-50%);
+        background-color: rgb(2, 64, 50, 0.8);
+        }
+
+
+        #quote3{
+        width:70%;
+        height: 210px;
+        padding-right: 45px;
+        padding-left: 45px;
+        padding: 45px;
+        line-height: 50px;
+        /*margin-left: auto;
+        margin-right: auto;*/
+        margin-bottom: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 25px;
+        position: absolute;
+        color: white;
+        left: 37.5%;
+        transform: translateX(-50%);
+        z-index:3;
+        top: 295%;
+        background-color: rgb(0, 0, 0, 0.5);
+
+        }
+
+        #profile3{
+            width: 230px;
+            height: 230px;
+            position: absolute;
+            top: 300%;
+            left: 80%;
+            z-index:4;
+            background-image: url(https://groveatlantic.com/core/wp-content/uploads/2017/03/mark-dery.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+
+
+ #blurb3{
+        width:70%;
+        height: 29%;
+        padding-right: 45px;
+        padding-left: 45px;
+        padding-top: 45px;
+        line-height: 30px;
+        margin-bottom: 40px;
+        font-family: "Encode Sans", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        position: absolute;
+        color: white;
+        left: 50%;
+        top: 350%;
+        transform: translateX(-50%);
+        background-color: rgb(4, 58, 89, 0.8);
+        }
+
+
+    </style>
+    <title></title>
+</head>
+<body>
+
+    <div class="background">
+        <div class="scrollable"></div>
+    </div>
+
+    <div class="image2">
+        <div class="scrollable"></div>
+    </div>
+
+    <div></div>
+
+    <div id="header">What is Afrofuturism?</div>
+
+    <div id="quote1">"The imagination is a tool of resistance. Creating stories with people of color in the future defies the norm. With the power of technology and emerging freedoms, black artists have more control over their image than ever before. Welcome to the future." - Ytasha Womack</div>
+
+    <div id="profile1"></div>
+
+    <div id="blurb1">
+        In her book <span id="italic">Afrofuturism: The World of Black Sci-Fi and Fantasy Culture</span>, Ytasha Womack describes Afrofuturism as an intersection of imagination, technology, the future, and  liberation. Through art, literature, music, politics, technology, and more, Afrofuturists redefine Blackness in the past, present, and future. Redefining Blackness means to break down stereotypes, older analyses of Blackness, and preconceived notions of normalcy since the future is rife with possibilities and the imagination reigns supreme. When the term “Afrofuturism” was first coined, the idea was groundbreaking, ushering in a new era of discourse, and previous experiences, art, and inventions from Black people were rediscovered as “Afrofuturist” and viewed from new perspectives. The movement combines a wide range of genres such as historical, sci-fi, speculative fiction, and fantasy, with non-Western beliefs. It stretches across time and field, so there is no singular definition or narrative, but at its core, it values creativity, resilience, and transcending limitations.
+    </div>
+
+    <div id="quote2">“Imagine a team of African archaeologists from the future - some silicon, some carbon, some wet, some dry - excavating a site, a museum from their past: a museum whose ruined documents and leaking discs are identifiable as belonging to our present, the early twenty-first century. Sifting patiently through the rubble, our archaeologists from the United States of Africa, the USAF, would be struck by how much Afrodiasporic subjectivity in the twentieth century constituted itself through the cultural project of recovery. In their Age of Total Recall, memory is never lost. Only the art of forgetting. Imagine them reconstructing the conceptual framework of our cultural moment from these fragments. What are the parameters of that moment, the edge of that framework?” - Kwodo Eshun</div>
+
+    <div id="profile2"></div>
+
+    <div id="blurb2">In his article "Further Considerations on Afrofuturism," Kwodo Eshun frames Afrofuturism as an archaeological effort to reconstruct history by examining cultural artifacts and argues that Afrofuturism continues the tradition of countermemory (the reconstruction of the past) into the future, making it an eternal chronopolitical movement. Through a variety of fields similar to what Womack named, Afrofuturism continues this archaeological task into the future, continuing an eternal discourse. Like David Scott in “On the Idea of a Black Radical Tradition,” he pinpoints the collective experience of slavery as the starting point of modernity, from where Black subjects have continued to experience dislocation and commodification into the contemporary era. In quoting thinkers that have contributed to Black intellectual thought, he brings up Du Bois’s concept of “double consciousness” and argues that while most science fiction envision how people in the future will engage with alienating and dislocating societies, Afrodiasporic subjects are already living in that reality. Afrofuturism allows one to access “triple consciousness, quadruple consciousness, [and] previously inaccessible alienations.” </div>
+
+    <div id="quote3">“The notion of Afrofuturism gives rise to a troubling antinomy: Can a community whose past has been deliberately rubbed out, and whose energies have subsequently been consumed by the search for legible traces of its history, imagine possible futures?” - Mark Dery
+</div>
+
+    <div id="profile3"></div>
+
+    <div id="blurb3">Mark Dery is known for coining the term “Afrofuturism” in his 1994 essay “Black to the Future.” He provides a loose definition of Afrofuturism in fiction by describing it as speculative fiction that addresses Black concerns and futures in the context of emerging technology. There has been a complicated relationship between Black people and science fiction in the past, because technology and dominant narratives about the future have been weaponized to suppress Black communities and their histories. The vastness of the future as well as the ubiquitous presence of voices that can be interpreted as “Afrofuturist” leaves a lot of possibilities for where the movemenet is headed.
+</div>
+
+</body>
+</html>
