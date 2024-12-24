@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+
+		@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Encode+Sans:wght@100..900&family=Fredericka+the+Great&family=Istok+Web&family=Mina:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display&display=swap');
+
+		body{
+			margin: 0px;
+			background-color: black;
+			overflow-x: hidden;
+		}
+
+		.background {
+            min-height: 100vh; /* Ensure the background takes at least the full height of the viewport */
+            background: url(https://images.unsplash.com/photo-1578059456805-cd4809a05d70?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
+            background-repeat: no-repeat;
+            background-size: cover; /* Ensure the image covers the entire area */
+            width: 100%;
+            color: #fff;
+            overflow: hidden; /* Hide overflow to prevent horizontal scrolling */
+		    
+		  
+        }
+
+        /* Make the scrollable content div */
+        .scrollable {
+            height: 400vh; /* Make the div taller than the viewport for scrolling */
+            width: 100%;
+            background: inherit; /* Keep the same background */
+            position: relative;
+        }
+
+        #header{
+          font-family: "Mina", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 80%; /* Width relative to its container */
+    max-width: 800px; /* Optional: limit the maximum width */
+    padding: 20px;
+    margin: 0; /* Remove margin to prevent overflow */
+    text-align: center;
+    box-sizing: border-box;
+    z-index:3;
+
+        }
+
+        #text1{
+        width:64%;
+        height: 440px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        line-height: 40px;
+        /*margin-left: auto;
+        margin-right: auto;*/
+        margin-bottom: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        position: absolute;
+        color: white;
+        left: 15%;
+        z-index:3;
+        top: 34%;
+        background-color: rgb(84, 166, 13, 0.9);
+        }
+
+         #textbox{
+        width:64%;
+        height: 570px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        line-height: 40px;
+        margin-bottom: 40px;
+        position: absolute;
+        color: white;
+        left: 15%;
+        z-index:3;
+        top: 110%;
+        background-color: rgb(84, 166, 13, 0.9);
+        }
+
+        #earthseed{
+        	position: absolute;
+        	z-index: 4;
+        	width: 250px;
+        	height: 250px;
+        	background-image: url(https://anotherendoftheworld.org/wp-content/uploads/2021/03/22729158_146106026122306_5694941229092012832_n.png);
+        	top: 116%;
+        	left: 64%;
+        	background-size: contain;
+        	background-repeat: no-repeat;
+        }
+
+        #text2{
+        	width:43%;
+        height: 280px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        line-height: 40px;
+        position: absolute;
+        color: white;
+        left: 15%;
+        z-index:4;
+        top: 110%;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        }
+
+        #text3{
+        width:64%;
+        height: 210px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        line-height: 40px;
+        position: absolute;
+        color: white;
+        left: 15%;
+        z-index:4;
+        top: 154%;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        }
+
+        #image1{
+        	z-index: 3;
+        	position: absolute;
+        	height: 350px;
+        	width: 350px;
+        	left: 550px;
+        	top: 203%;
+        	background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0964df06-9ff3-4999-a17d-cbd4f2dffae2/df6s2y1-47f109f8-2f0e-4a14-8032-fa90810c74ed.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA5NjRkZjA2LTlmZjMtNDk5OS1hMTdkLWNiZDRmMmRmZmFlMlwvZGY2czJ5MS00N2YxMDlmOC0yZjBlLTRhMTQtODAzMi1mYTkwODEwYzc0ZWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.8AFsXCIYWHzBAoG3nJaJ0CwoUWkoeYl5pqc5PwtRpJc);
+        	background-size: contain;
+        	background-repeat: no-repeat;
+
+        }
+
+        #image2{
+        	z-index: 3;
+        	position: absolute;
+        	height: 400px;
+        	width: 1000px;
+        	left: 320px;
+        	top: 265%;
+        	background-image: url(https://s26162.pcdn.co/wp-content/uploads/2024/07/parable-of-the-sower.jpg);
+        	background-size: contain;
+        	background-repeat: no-repeat;
+
+        }
+
+        #image3{
+        	z-index: 3;
+        	position: absolute;
+        	height: 400px;
+        	width: 1000px;
+        	left: 445px;
+        	top: 335%;
+        	background-image: url(https://images.squarespace-cdn.com/content/v1/5847095ff5e231d8326553f9/1511418528762-WE9A0IHGL9J6V13ZAFX6/ke17ZwdGBToddI8pDm48kBochHc3VIdDEQDJWr14d_UUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKc9nPqU6Jyom6CTZZINEsZjTcSpyMvqLxb0lR4fP_fY9AbE1a9MbxG2BS2DO1r_LHf/%2522The+Offering%2522+++30%2522+x+40%2522++Oct+2014++copy.jpg?format=750w);
+        	background-size: contain;
+        	background-repeat: no-repeat;
+        }
+
+        #italic{
+        	font-style: italic;
+        }
+
+     
+	</style>
+
+	<title></title>
+</head>
+
+<body>
+
+<div class="background">
+	<div class="scrollable"></div>
+
+</div>
+
+<div id="header">Discussion and Significance</div>
+
+<div id="text1">In their article “Religion and Critical Dystopia: Afrofuturism in Octavia E. Butler’s Parable of the Sower,” authors Antara Choudhury and Shreyashi Mukherjee argue that the belief in community, activism, and diversity in the novel are central to Black womanism. Womanism is against rigid boundaries, promotes collective wellbeing, is against oppression of all kinds, prioritizes action, and seeks to reconcile the spiritual and environmental with human  life. According to them, Lauren is a non-conformist Afrofuturist leader and her journey presents black women’s resourcefulness which is emphasized by the presence of both Afrofuturist and womanist tenets. 
+<p> Earthseed rejects the authoritarianism and hierarchy of traditional religion and is sustained by the collective action of its followers. The Earthseed community strives to break down systems of oppression and promotes diversity, equality, and freedom. In everyday practice, followers blend science and religion to solve problems and look towards a better future, which possibly includes space exploration. I believe these facts are evidence that Earthseed fits in with both the womanist ideals laid out by Choudhury and Mukherjee and Womack’s analysis of the divine feminine principle. </p>
+</div>
+
+<div id="textbox"></div>
+
+<div id="earthseed"></div>
+
+<div id="text2">Butler’s personal take on Afrofuturism is one that heavily leans into feminism, portraying the journey of Lauren as female founder of a religion, a trailblazer who provides an emancipatory path for the most marginalized in society, and the creater of a community that dismantles hierarchies. Choudhury and Mukherjee draw similarities between Lauren and Harriet Tubman, who both had to head north in resourceful ways in order to give freedom to the enslaved. Earthseed embodies Afrofuturism as it draws from science, critiques old systems, and looks towards the future with hope and the need for change.</div>
+
+<div id="text3">As Afrofuturism is a movement that analyzes and reaches into the past, present, and future, <span id="italic">Parable of the Sower</span> and its themes hold a lot of prophetic power. The creation of Earthseed reminds the reader of the need for change, community, and connection with the environment: the name “Earthseed” itself comes from the traveling of seeds through the wind, and Lauren’s founding of Acorn is akin to the act of a seed planting itself and flourishing far from where it came from. Since the characters face conflicts along the way and the community itself is still a work in progress, Butler’s warnings about the future are able to come off poignantly without being didactic. The eternal, transcendent critical framework of Afrofuturism has the power to bring about change and generate resourcefulness even in the most dire of circumstances.
+</div>
+
+<div id="image1"></div>
+
+<div id="image2"></div>
+
+<div id="image3"></div>
+
+</body>
+
+</html>
