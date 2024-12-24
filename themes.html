@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Encode+Sans:wght@100..900&family=Fredericka+the+Great&family=Istok+Web&family=Mina:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display&display=swap');
+
+		body{
+			margin: 0px;
+			background-color: black;
+
+		}
+
+		.background {
+            min-height: 100vh;
+            background: url(https://images.unsplash.com/photo-1715731456178-102f0445411b?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            width: 100%;
+            color: #fff;
+            overflow: hidden;
+		     filter: blur(1px);
+		    -webkit-filter: blur(1px);
+        }
+
+        .scrollable {
+            height: 400vh;
+            width: 100%;
+            background: inherit;
+            position: relative;
+        }
+
+        #header{
+          font-family: "Mina", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 80%; /* Width relative to its container */
+    max-width: 800px; /* Optional: limit the maximum width */
+    padding: 20px;
+    margin: 0; /* Remove margin to prevent overflow */
+    text-align: center;
+    box-sizing: border-box;
+    z-index:3;
+
+}
+
+		#italic{
+
+			font-style: italic;
+		}
+
+		#theme1{
+		width:64%;
+        height: 560px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1.5%;
+        line-height: 40px;
+        /*margin-left: auto;
+        margin-right: auto;*/
+        margin-bottom: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        position: absolute;
+        color: white;
+        left: 15%;
+        z-index:3;
+        top: 35%;
+        background-color: rgb(0, 0, 0, 0.5);
+		}
+
+		#banner{
+			top: 130%;
+			width: 100%;
+			height: 300px;
+			z-index: 3;
+			position:absolute;
+			background-image: url(https://www.aboundinglove.org/images/pics/sower.jpeg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		#theme2{
+			width:64%;
+        height: 450px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1.5%;
+        line-height: 40px;
+        /*margin-left: auto;
+        margin-right: auto;*/
+        margin-bottom: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        position: absolute;
+        color: white;
+        left: 15%;
+        z-index:3;
+        top: 183%;
+        background-color: rgb(0, 0, 0, 0.5);
+		}
+
+		.image2{
+			height: 100vh;
+            position: relative;
+            background: url(https://images.unsplash.com/photo-1715731456178-102f0445411b?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
+            background-repeat: no-repeat;
+            /*background-attachment: fixed;
+            /*-webkit-background-size: cover;
+            -moz-background-size: cover;*/
+            background-size: cover;
+            color: #fff;
+            overflow: hidden;
+           filter: blur(1px);
+            -webkit-filter: blur(1px);
+		}
+
+
+		#cover1{
+			width: 15%;
+			height: 45%;
+			position: absolute;
+			z-index: 3;
+			top: 260%;
+			left: 15%;
+			background-image: url(https://m.media-amazon.com/images/I/71568fwf4CL.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+
+		}
+
+		#cover2{
+			width: 15%;
+			height: 45%;
+			position: absolute;
+			z-index: 3;
+			top: 260%;
+			left: 42.5%;
+			background-image: url(https://m.media-amazon.com/images/I/91nT32XLsSL._AC_UF1000,1000_QL80_.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		#cover3{
+			width: 15%;
+			height: 45%;
+			position: absolute;
+			z-index: 3;
+			top: 260%;
+			left: 70%;
+			background-image: url(https://m.media-amazon.com/images/I/71jg6gRAKkL._AC_UF1000,1000_QL80_.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		#theme3{
+			width:64%;
+        height: 520px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1.5%;
+        line-height: 40px;
+        /*margin-left: auto;
+        margin-right: auto;*/
+        margin-bottom: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        position: absolute;
+        color: white;
+        left: 15%;
+        z-index:3;
+        top: 313%;
+        background-color: rgb(0, 0, 0, 0.5);
+		}
+
+
+
+	</style>
+
+	<title></title>
+</head>
+<body>
+
+	<div class="background">
+		<div class="scrollable"></div>
+	</div>
+
+	<div id="header">Themes in <span id="italic">Parable of a Sower</span></div>
+
+	<div id="theme1"><h1>1. Reimagining of community</h1> At the beginning of the novel, the main character Lauren lives in a violent, dystopian society. In the post-apocalyptic world ravaged by climate change, people live in gated communities that compete for the remaining resources and ignore the plight of the people who are shut out. Every “community” is primarily driven by the ability to generate capital, the ignorance of outside suffering, and self-interest. After her community, Robledo, is besieged by pyromaniacs, Lauren heads north in search of a better life and seeks to establish the first “Earthseed” community. Her religion Earthseed that she founded is a new religion she coined that advocates for accepting the need to change, and manipulating change so that it brings about transformative results. Change in Earthseed is brought about through collective actions, through community resilience. Along the journey, she recruits people from outside of the gated community that she observes has suffered for a long time, and hopes that Earthseed can give them hope and freedom. This process of creating a new community is one that challenges the boundaries and norms already set in the world, both physical and societal. Her first Earthseed community that she founds, Acorn, is founded on barren land, suggesting that even in the face of dystopia, there is hope for change and the creation of healing social structures.
+</div>
+
+	<div id="banner"></div>
+
+	<div id="theme2"><h1>2. Reimagining of religion</h1> Lauren was brought up in a Baptist family, so she already has experience with what religion could look like. She believes that the God that her father has preached to her about is incompatible with the current state of the world, and uncaring and absent. She recalls the suffering of women, of poor people caught in natural disasters, her neighbor Ms. Sims, and her brother Keith, and concludes that God in the traditional sense disregards the most marginalized in her society. In Earthseed, her god is Change, a genderless, flexible entity. It deals with ongoing reality rather than rituals and the supernatural, and Lauren believes that worship is fruitless without action. Followers of the religion do not pray to an authority figure but to themselves, hoping to be able to enact Change through their actions and the resilience of the community. In bringing about change in her community, Lauren frequently employs scientific laws and practices, synthesizing them with religious practices.</div>
+
+	<div id="cover1"></div>
+
+	<div id="cover2"></div>
+
+	<div id="cover3"></div>
+
+	<div id="theme3"><h1>3. Reconstruction and destruction</h1> The whole founding of Earthseed is rooted in the need for community, resilience, emancipation, and direct-action taking in a post-apocalyptic world. Leaving behind her destroyed gated community and traversing a land of natural disasters, Lauren searches for an Earthseed community and seeks to reconstruct the souls of the people that she recruits. Followers of the religion do not rely on the capricious actions of an authority figure, but must enact change themselves. Earthseed’s tenets include “God is change” as well as “The Destiny of Earthseed is to take root among the stars.” I discussed the first tenet in the previous two sections, and this next tenet points out that even as the physical Earth approaches its demise, followers of Earthseed must strive to imagine a future that goes beyond this. They must strive to make their current lives as meaningful as possible and choose alternate paths to destruction. The world is ravaged by climate change and seems quite close to the destruction of all Earth, and it is up to the followers of Earthseed to choose what to destroy and reconstruct what can be salvaged for what is ultimately a better future. Additionally, to “take root among the stars” also means space exploration, where followers of Earthseed could construct more communities on other planets.</div>
+
+</body>
+</html>
